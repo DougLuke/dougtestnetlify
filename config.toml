@@ -59,6 +59,13 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   quality = 90
   anchor = "smart"  # Anchor for cropping. Options include Smart and Center.
 
+# Changes to main menu?
+# [[menu.main]]
+#  name = "CV"
+#  url = "#cv"
+#  weight = 4
+
+
 # Taxonomies.
 [taxonomies]
   tag = "tags"
