@@ -40,3 +40,8 @@
   url = "#cv"
   weight = 42
 
+[[main]]
+  name = "Books"
+  url = "#books"
+  weight = 25
+
