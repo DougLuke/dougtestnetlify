@@ -6,7 +6,7 @@ active = true  # Activate this widget? true/false
 weight = 63  # Order that this section will appear.
 
 title = "Books"
-subtitle = "A short subtitle"
+subtitle = "Support for books I have written"
 
 [content]
   # Page type to display. E.g. project.
@@ -26,12 +26,12 @@ subtitle = "A short subtitle"
     tag = "*"
   
   [[content.filter_button]]
-    name = "Deep Learning"
-    tag = "Deep Learning"
+    name = "Multilevel Modeling"
+    tag = "MLM"
   
-  [[content.filter_button]]
-    name = "Other"
-    tag = "Demo"
+  #[[content.filter_button]]
+  #  name = "Other"
+  #  tag = "Demo"
     
   [[content.filter_button]]
     name = "Network Analysis"
