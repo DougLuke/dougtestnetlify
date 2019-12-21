@@ -10,7 +10,7 @@ links:
   name: Follow
   url: https://twitter.com/georgecushen
 slides: example
-summary: An example of using the in-built project page.
+summary: Multilevel Modeling - Sage Green Book.
 tags:
 - MLM
 title: MLM
