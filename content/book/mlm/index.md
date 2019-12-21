@@ -29,3 +29,5 @@ To install the R package for the book, run the following code:
 library(devtools)
 install_github("DougLuke/LukeMLM")
 ```
+
+Download a ZIP file with all R code [here](code/chap_assess.zip).
