@@ -20,18 +20,26 @@ url_slides: ""
 url_video: ""
 ---
 
-Multilevel Modeling is a concise, practical guide to building models for multilevel and longitudinal data. Author Douglas A. Luke begins by providing a rationale for multilevel models; outlines the basic approach to estimating and evaluating a two-level model; discusses the major extensions to mixed-effects models; and provides advice for where to go for instruction in more advanced techniques. Rich with examples, the Second Edition expands coverage of longitudinal methods, diagnostic procedures, models of counts (Poisson), power analysis, cross-classified models, and adds a new section added on presenting modeling results. A website for the book includes the data and the statistical code (both R and Stata) used for all of the presented analyses.
+## Description
 
+Multilevel Modeling is a concise, practical guide to building models for multilevel and longitudinal data. Author Douglas A. Luke begins by providing a rationale for multilevel models; outlines the basic approach to estimating and evaluating a two-level model; discusses the major extensions to mixed-effects models; and provides advice for where to go for instruction in more advanced techniques. Rich with examples, the Second Edition expands coverage of longitudinal methods, diagnostic procedures, models of counts (Poisson), power analysis, cross-classified models, and adds a new section added on presenting modeling results. 
 
-To install the R package for the book, run the following code:
+## Resources
+
+### Data
+
+To install the R package for the book that contains all the datasets, run the following code:
 
 ```r
 library(devtools)
 install_github("DougLuke/LukeMLM")
 ```
 
-Download a ZIP file with all R code [here](code/chap_assess.zip).
+### R code
 
-Download an Rmd file with some code [here](code/Power dev.Rmd/).
+Download an Rmd file with some code [here](code/chap_basic V1x.Rmd).
 
-Open up a link to see the R code [here](code/chapdum.html/).
+### Stata code
+
+***Coming soon!***
+

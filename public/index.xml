@@ -429,19 +429,29 @@ $$&lt;/p&gt;
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
       <guid>/book/mlm/</guid>
-      <description>&lt;p&gt;Multilevel Modeling is a concise, practical guide to building models for multilevel and longitudinal data. Author Douglas A. Luke begins by providing a rationale for multilevel models; outlines the basic approach to estimating and evaluating a two-level model; discusses the major extensions to mixed-effects models; and provides advice for where to go for instruction in more advanced techniques. Rich with examples, the Second Edition expands coverage of longitudinal methods, diagnostic procedures, models of counts (Poisson), power analysis, cross-classified models, and adds a new section added on presenting modeling results. A website for the book includes the data and the statistical code (both R and Stata) used for all of the presented analyses.&lt;/p&gt;
+      <description>
 
-&lt;p&gt;To install the R package for the book, run the following code:&lt;/p&gt;
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;p&gt;Multilevel Modeling is a concise, practical guide to building models for multilevel and longitudinal data. Author Douglas A. Luke begins by providing a rationale for multilevel models; outlines the basic approach to estimating and evaluating a two-level model; discusses the major extensions to mixed-effects models; and provides advice for where to go for instruction in more advanced techniques. Rich with examples, the Second Edition expands coverage of longitudinal methods, diagnostic procedures, models of counts (Poisson), power analysis, cross-classified models, and adds a new section added on presenting modeling results.&lt;/p&gt;
+
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+
+&lt;h3 id=&#34;data&#34;&gt;Data&lt;/h3&gt;
+
+&lt;p&gt;To install the R package for the book that contains all the datasets, run the following code:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(devtools)
 install_github(&amp;quot;DougLuke/LukeMLM&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Download a ZIP file with all R code &lt;a href=&#34;code/chap_assess.zip&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;r-code&#34;&gt;R code&lt;/h3&gt;
 
-&lt;p&gt;Download an Rmd file with some code &lt;a href=&#34;code/Power dev.Rmd/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Download an Rmd file with some code &lt;a href=&#34;code/chap_basic V1x.Rmd&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Open up a link to see the R code &lt;a href=&#34;code/chapdum.html/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;stata-code&#34;&gt;Stata code&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Coming soon!&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 </description>
     </item>
     

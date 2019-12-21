@@ -1,0 +1,159 @@
+---
+title: "MLM Chapter 3"
+author: "Doug Luke"
+date: "12/21/2019"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    number_sections: false
+    theme: lumen
+    highlight: textmate
+---
+
+# Basic Multilevel Modeling
+{#chap:basic} 
+
+```{r setupbasic, echo=FALSE,message=FALSE,warning=FALSE}
+library(xtable)
+library(LukeMLM)
+library(lme4)
+library(dplyr)
+library(tidyr)
+data("tvprp")
+```
+
+
+## The Basic Two-Level Multilevel Model
+{#sec:basictwolevel}
+
+
+### The Importance of Random Effects
+
+
+### Classifying Multilevel Models
+
+
+```{r plotbasic1}
+op <- par(mfrow=c(1,2))
+xdum <- 0:5
+ydum <- 0:5
+plot(xdum,ydum,type="n",main="Varying Intercepts",
+     xlab="Level-1 Predictor",ylab="Dependent Variable")
+segments(1,1,4,2.5)
+segments(1,2,4,3.5)
+segments(1,3,4,4.5)
+plot(xdum,ydum,type="n",
+     main="Varying Intercepts and Slopes",
+     xlab="Level-1 Predictor",ylab="")
+segments(1,1,4,2.5)
+segments(1,1.2,4,3.8)
+segments(1,3.5,4,4.5)
+par(op)
+```
+
+
+
+## How to Build and Evaluate a Multilevel Model
+
+### Introduction to Tobacco Industry Data Set
+
+
+### Assessing the Need for a Multilevel Model
+
+```{r plotmapsetup}
+library(LukeMLM)
+library(dplyr)
+
+data("tvprp")
+
+state_vote <- tvprp %>%
+  select(state,votepct) %>%
+  group_by(state) %>%
+  summarize(count = n(),mean_vote = mean(votepct, na.rm=TRUE)) %>%
+  filter(state != "AK" & state != "HI")
+
+state_vote
+vote_df <- data.frame(state_vote)
+
+# detach("package:dplyr", unload=TRUE)
+
+library(ggplot2)
+library(viridis)
+library(maps)
+library(scales)
+
+state_df <- map_data("state")
+state_df$state <- state.abb[match(state_df$region, tolower(state.name))]
+
+choropleth <- merge(state_df,vote_df, by="state")
+head(choropleth)
+choropleth <- choropleth[order(choropleth$order), ]
+
+# Discretise rate to use with Brewer colour scheme - many options here
+# choropleth$rate_d <- cut_number(choropleth$rate, 5)
+# choropleth$mean_vote_d <- cut_interval(choropleth$mean_vote, 5)
+choropleth$mean_vote_d <- cut(choropleth$mean_vote, breaks = c(seq(0, 1, by = .2)))
+```
+
+```{r plotmapC}
+ggplot(choropleth, aes(long, lat, group = group)) +
+  geom_polygon(aes(fill = mean_vote), colour = alpha("white", 1/2), size = 0.2) +
+  geom_polygon(data = state_df, colour = "white", fill = NA) +
+  coord_fixed(1.3) +
+  theme_void() +
+  theme(legend.position = "bottom") +
+  scale_fill_viridis(
+    option = "viridis",
+    direction = -1,
+    discrete = FALSE,
+    name = "Average Vote %",
+    guide = guide_colorbar(
+      direction = "horizontal",
+      barheight = unit(2, units = "mm"),
+      barwidth = unit(50, units = "mm"),
+      draw.ulim = F,
+      title.position = 'top',
+      # some shifting around
+      title.hjust = 0.5,
+      label.hjust = 0.5
+  ))
+```
+
+
+```{r plotscatterxC}
+library(ggplot2)
+data("tvprp")
+
+tvlrg <- tvprp[tvprp$state %in% c("CA","FL","IL","NY"),]
+
+ggplot(data = tvlrg, mapping = aes(x = pactotal, y = votepct, color = state, shape = state, linetype = state )) +
+  geom_point(size = 2) +
+  geom_smooth(method = "lm", se = FALSE,fullrange = FALSE) +
+  scale_y_continuous(labels=percent, limits=c(0,1.05)) +
+  scale_shape_manual(values = c(1,2,0,23)) +
+  scale_linetype_manual(name="State",values=c("solid","dotted","longdash","dotdash")) +
+  labs(x = "PAC Money ($K)", y = "Vote %\n", color = "State", shape = "State", linetype = "State") +
+  theme_minimal() +
+  theme(legend.position="bottom",legend.key.width = unit(2.5, "line"))
+```
+
+
+```{r plotsplom2}
+library(ggplot2)
+tvprp$statenew <- with(tvprp, reorder(state, votepct, mean))
+
+ggplot(data = tvprp, mapping = aes(x = pactotal, y = votepct)) +
+  geom_point() + 
+  facet_wrap( ~ statenew) + 
+  geom_smooth(method="lm", se=FALSE, color = "black", size = .8) +
+  labs(x = "PAC Money",y = "Vote %") +
+  theme_bw()
+```
+
+
+```{r nullmodelR, eval=FALSE,echo=FALSE,comment=NA}
+mod0 <- lmer(votepct ~ 1 + (1|state),data=tvprp,REML=FALSE)
+print(summary(mod0))
+```
+
