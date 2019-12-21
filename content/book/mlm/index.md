@@ -37,7 +37,7 @@ install_github("DougLuke/LukeMLM")
 
 ### R code
 
-Download an Rmd file with some code [here](code/chap_basic V1x.Rmd).
+Download an Rmd file with some code [here](code/chap_basic V1x.Rmd). (Right click and select save as.)
 
 ### Stata code
 
