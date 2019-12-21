@@ -31,3 +31,5 @@ install_github("DougLuke/LukeMLM")
 ```
 
 Download a ZIP file with all R code [here](code/chap_assess.zip).
+
+Download an Rmd file with some code [here](code/Power dev.Rmd).
