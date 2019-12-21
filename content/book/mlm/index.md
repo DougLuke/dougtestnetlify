@@ -32,6 +32,6 @@ install_github("DougLuke/LukeMLM")
 
 Download a ZIP file with all R code [here](code/chap_assess.zip).
 
-Download an Rmd file with some code [here](code/Power dev.Rmd).
+Download an Rmd file with some code [here](code/Power dev.Rmd/).
 
-Open up a link to see the R code [here](code/chapdum.html).
+Open up a link to see the R code [here](code/chapdum.html/).
