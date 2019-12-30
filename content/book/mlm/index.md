@@ -37,9 +37,11 @@ install_github("DougLuke/LukeMLM")
 
 ### R code
 
-This is a test for [chap2_code.Rmd](/code/chap2_code.Rmd).
+The R code used for the models and many of the figures contained in the Sage book can be downloaded here.
 
-Download an Rmd file with some code [here](code/chap_basic V1x.Rmd). (Right click and select save as.)
+* Chapter 2 - *Planning*: ([chap2_code.Rmd](/code/chap2_code.Rmd))
+
+This is a test for [chap4_code.html](/code/chap4_code.html).
 
 ### Stata code
 
