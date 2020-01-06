@@ -40,11 +40,11 @@ install_github("DougLuke/LukeMLM")
 The R code used for the models and many of the figures contained in the Sage book can be downloaded here.
 
 * Chapter 2 - *Planning*: ([chap2_code.Rmd](/code/chap2_code.Rmd))
-* Chapter 3 - *Building*: ([chap3_code.Rmd](/code/chap2_code.Rmd))
-* Chapter 4 - *Assessing*: ([chap4_code.Rmd](/code/chap2_code.Rmd))
-* Chapter 5 - *Extending*: ([chap5_code.Rmd](/code/chap2_code.Rmd))
-* Chapter 6 - *Longitudinal*: ([chap6_code.Rmd](/code/chap2_code.Rmd))
-* Chapter 7 - *Guidance*: ([chap7_code.Rmd](/code/chap2_code.Rmd))
+* Chapter 3 - *Building*: ([chap3_code.Rmd](/code/chap3_code.Rmd))
+* Chapter 4 - *Assessing*: ([chap4_code.Rmd](/code/chap4_code.Rmd))
+* Chapter 5 - *Extending*: ([chap5_code.Rmd](/code/chap5_code.Rmd))
+* Chapter 6 - *Longitudinal*: ([chap6_code.Rmd](/code/chap6_code.Rmd))
+* Chapter 7 - *Guidance*: ([chap7_code.Rmd](/code/chap7_code.Rmd))
 
 
 ### Stata code
